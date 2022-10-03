@@ -1,0 +1,255 @@
+.section {
+  padding: 4rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #0f1424;
+  height: 100%;
+  color: white;
+}
+
+.cards__box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 976px) {
+  .cards__box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .cards__box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.cards__box__profile {
+  width: 100%;
+  max-width: 225px;
+  background-color: #1c1f4a;
+  border-radius: 1rem;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+@media (max-width: 976px) {
+  .cards__box__profile {
+    max-width: none;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.cards__box__profile-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+@media (max-width: 360px) {
+  .cards__box__profile-text {
+    margin-top: 0px;
+  }
+}
+
+.cards__box-photo {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #5847eb;
+  border-radius: 1rem;
+}
+
+@media (max-width: 360px) {
+  .cards__box-photo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+.cards__box-selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+}
+
+@media (max-width: 976px) {
+  .cards__box-selectors {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.cards__box-selectors-btns {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 116%;
+  color: #bdc1ff;
+  cursor: pointer;
+  transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cards__box-selectors-btns:hover {
+  color: white;
+}
+
+.cards__box-selectors-btns--active {
+  color: white;
+  font-weight: 400;
+  cursor: default;
+}
+
+.cards__box-subtitle {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 116%;
+  margin-bottom: 10px;
+}
+
+.cards__box-title {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 116%;
+}
+
+@media (max-width: 360px) {
+  .cards__box-title {
+    font-size: 20px;
+  }
+}
+
+.cards__box__activites {
+  width: 100%;
+  padding-top: 27px;
+  border-radius: 1rem;
+}
+
+.cards__box__activites-work {
+  background-color: #ff8c66;
+  background-image: url("../images/icon-work.svg");
+  background-position: 92% -8%;
+  background-repeat: no-repeat;
+}
+
+.cards__box__activites-play {
+  background-color: #56c2e6;
+  background-image: url("../images/icon-play.svg");
+  background-position: 92% -8%;
+  background-repeat: no-repeat;
+}
+
+.cards__box__activites-study {
+  background-color: #ff5c7c;
+  background-image: url("../images/icon-study.svg");
+  background-position: 92% -8%;
+  background-repeat: no-repeat;
+}
+
+.cards__box__activites-exercise {
+  background-color: #4acf81;
+  background-image: url("../images/icon-exercise.svg");
+  background-position: 92% -8%;
+  background-repeat: no-repeat;
+}
+
+.cards__box__activites-social {
+  background-color: #7536d3;
+  background-image: url("../images/icon-social.svg");
+  background-position: 92% -8%;
+  background-repeat: no-repeat;
+}
+
+.cards__box__activites-self-care {
+  background-color: #f1c65b;
+  background-image: url("../images/icon-self-care.svg");
+  background-position: 92% -8%;
+  background-repeat: no-repeat;
+}
+
+.activites-card {
+  position: relative;
+  bottom: -6px;
+  padding: 1.5rem;
+  background-color: #1c1f4a;
+  border-radius: 1rem;
+  transition: background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activites-card:hover {
+  background-color: #262a64;
+}
+
+.activites-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.activites-header-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 116%;
+}
+
+.activites-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 360px) {
+  .activites-body {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.activites-body__time {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 116%;
+}
+
+@media (max-width: 360px) {
+  .activites-body__time {
+    font-size: 33px;
+  }
+}
+
+.activites-body__total {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 116%;
+  color: #bdc1ff;
+}
+
+@media (max-width: 360px) {
+  .activites-body__total {
+    font-size: 12px;
+  }
+}
+
+.profile-photo__img {
+  width: 75px;
+  height: 75px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+@media (max-width: 360px) {
+  .profile-photo__img {
+    width: 50px;
+    height: 50px;
+  }
+}
